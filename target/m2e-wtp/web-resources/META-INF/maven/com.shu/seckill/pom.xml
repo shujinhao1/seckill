@@ -1,0 +1,182 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.shu</groupId>
+  <artifactId>seckill</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>seckill Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+  	<spring.version>4.3.3.RELEASE</spring.version>
+  	<mybatis.version>3.2.5</mybatis.version>
+  	<mysql.version>5.1.38</mysql.version>
+  	<log4j.version>1.2.17</log4j.version>
+  	<slf4j.version>1.7.21</slf4j.version>
+  </properties>
+  <dependencies>
+  	<!-- junit版本 start-->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- junit版本 end-->
+    <!-- spring版本start -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aop</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-tx</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <!-- spring版本end -->
+    <!-- mysql版本 start-->
+    <dependency>  
+        <groupId>mysql</groupId>  
+        <artifactId>mysql-connector-java</artifactId>  
+        <version>${mysql.version}</version>  
+     </dependency> 
+     <!-- mysql版本 end-->
+     <!-- mybatis版本 start-->
+     <dependency>  
+        <groupId>org.mybatis</groupId>  
+        <artifactId>mybatis</artifactId>  
+        <version>${mybatis.version}</version>  
+     </dependency>  
+     <!-- mybatis版本 end-->
+     <!-- AOP相关包 -->
+      <dependency>
+          <groupId>org.aspectj</groupId>
+          <artifactId>aspectjrt</artifactId>
+          <version>1.8.0</version>
+      </dependency>
+      <dependency>
+          <groupId>org.aspectj</groupId>
+          <artifactId>aspectjweaver</artifactId>
+          <version>1.8.0</version>
+      </dependency>
+      <!-- 数据库连接池 -->
+      <dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>druid</artifactId>
+          <version>1.0.20</version>
+      </dependency>
+      <!-- log start -->
+      <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+          <version>${log4j.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+          <version>${slf4j.version}</version>
+      </dependency>
+      <!-- log end -->
+      <!-- Spring集成MyBatis -->
+      <dependency>
+          <groupId>org.mybatis</groupId>
+          <artifactId>mybatis-spring</artifactId>
+          <version>1.2.3</version>
+      </dependency>
+      <!-- JSP标准标签库 -->
+      <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>jstl</artifactId>
+          <version>1.2</version>
+      </dependency>
+      <!-- Json  -->    
+      <!-- 格式化对象，方便输出日志 -->    
+      <dependency>    
+          <groupId>com.alibaba</groupId>    
+          <artifactId>fastjson</artifactId>    
+          <version>1.2.6</version>    
+      </dependency>    
+      <!-- 核心包 -->
+      <dependency>
+             <groupId>com.fasterxml.jackson.core</groupId>
+             <artifactId>jackson-core</artifactId>
+             <version>2.7.5</version>
+       </dependency>
+       <!-- 注解包 -->
+       <dependency>
+             <groupId>com.fasterxml.jackson.core</groupId>
+             <artifactId>jackson-annotations</artifactId>
+             <version>2.7.5</version>
+       </dependency>
+       <!-- 数据绑定包 -->
+       <dependency>
+             <groupId>com.fasterxml.jackson.core</groupId>
+             <artifactId>jackson-databind</artifactId>
+             <version>2.7.5</version>
+       </dependency>
+      <!-- 上传组件包 start -->    
+      <dependency>    
+          <groupId>commons-fileupload</groupId>    
+          <artifactId>commons-fileupload</artifactId>    
+          <version>1.3.1</version>    
+      </dependency>    
+      <dependency>    
+          <groupId>commons-io</groupId>    
+          <artifactId>commons-io</artifactId>    
+          <version>2.4</version>    
+      </dependency>    
+      <dependency>    
+          <groupId>commons-codec</groupId>    
+          <artifactId>commons-codec</artifactId>    
+          <version>1.10</version>    
+      </dependency>    
+      <!-- 上传组件包 end -->   
+      
+      <!--导入连接redis的JAR包-->
+      <dependency>
+          <groupId>redis.clients</groupId>
+          <artifactId>jedis</artifactId>
+          <version>2.9.0</version>
+      </dependency>
+  </dependencies>
+  <build>
+    <finalName>seckill</finalName>
+    <plugins>
+       <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                     <source>1.8</source>
+                     <target>1.8</target>
+              </configuration>
+       </plugin>
+	</plugins>
+  </build>
+</project>
