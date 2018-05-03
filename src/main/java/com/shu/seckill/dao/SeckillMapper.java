@@ -3,6 +3,7 @@ package com.shu.seckill.dao;
 import java.util.List;
 
 import com.shu.seckill.entity.Seckill;
+import com.shu.seckill.entity.SeckillBo;
 
 public interface SeckillMapper {
     int deleteByPrimaryKey(Long seckillId);
@@ -18,4 +19,6 @@ public interface SeckillMapper {
     int updateByPrimaryKey(Seckill record);
 
 	List<Seckill> querySeckillList();
+
+	int reduceNumber(SeckillBo seckillBo);
 }

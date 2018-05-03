@@ -105,6 +105,9 @@ var seckill = {
                                 var stateInfo = killResult['stateInfo'];
                                 //显示秒杀结果
                                 node.html('<span class="label label-success">' + stateInfo + '</span>');
+                            }else{
+                            	 var stateInfo = killResult['stateInfo'];
+                            	 node.html('<span class="label label-fail">' + result + '</span>');
                             }
                         });
                     });

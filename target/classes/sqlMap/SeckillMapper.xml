@@ -108,4 +108,15 @@
       create_time = #{createTime,jdbcType=TIMESTAMP}
     where seckill_id = #{seckillId,jdbcType=BIGINT}
   </update>
+  
+  <update id="reduceNumber" parameterType="com.shu.seckill.entity.SeckillBo">
+        UPDATE seckill
+        SET number = number - 1
+        WHERE seckill_id = #{seckillId,jdbcType=BIGINT}
+        AND start_time <![CDATA[
+        <=
+        ]]> #{killTime}
+        AND end_time >= #{killTime}
+        AND number > 0
+    </update>
 </mapper>
